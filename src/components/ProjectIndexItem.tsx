@@ -15,6 +15,8 @@ export function ProjectIndexItem({ project }: ProjectIndexItemProps) {
             <a href={project.href} target="_blank" rel="noreferrer">
               Ver proyecto
             </a>
+          ) : project.status ? (
+            <span className="project-status">{project.status}</span>
           ) : null}
         </div>
         <p>{project.summary}</p>
