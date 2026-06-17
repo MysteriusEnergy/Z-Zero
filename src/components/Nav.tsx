@@ -7,7 +7,7 @@ export function Nav() {
   return (
     <nav className="site-nav" aria-label="Secciones principales">
       <a className="site-mark" href="#hero" aria-label="Ir al inicio">
-        Z/Zero
+        JMR
       </a>
       <div className="nav-list">
         {navSections.map((section, index) => (
