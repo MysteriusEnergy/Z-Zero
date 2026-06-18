@@ -1,7 +1,10 @@
-import type { ReactNode } from 'react';
+import { lazy, Suspense, type ReactNode } from 'react';
 import { useScrollProgress } from '../hooks/useScrollProgress';
-import { Experience } from '../three/Experience';
 import { Nav } from './Nav';
+
+const Experience = lazy(() =>
+  import('../three/Experience').then((module) => ({ default: module.Experience })),
+);
 
 type LayoutProps = {
   children: ReactNode;
@@ -13,7 +16,9 @@ export function Layout({ children }: LayoutProps) {
   return (
     <>
       <div className="canvas-layer" aria-hidden="true">
-        <Experience />
+        <Suspense fallback={null}>
+          <Experience />
+        </Suspense>
       </div>
       <div className="content-layer">
         <Nav />

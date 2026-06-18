@@ -85,6 +85,7 @@ a {
 .nav-link,
 .eyebrow,
 .project-year,
+.project-status,
 .tag-list,
 .text-link,
 .email-link {
@@ -272,6 +273,26 @@ h3 {
   margin-bottom: 1.1rem;
 }
 
+.project-status {
+  flex: 0 0 auto;
+  padding: 0.35rem 0.55rem;
+  border: 1px solid color-mix(in srgb, var(--color-muted) 34%, transparent);
+  color: var(--color-muted);
+  font-size: 0.66rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.project-status[data-status='Público'] {
+  border-color: color-mix(in srgb, var(--color-jade) 42%, transparent);
+  color: var(--color-jade);
+}
+
+.project-status[data-status='Próximamente'] {
+  border-color: color-mix(in srgb, var(--color-ember) 42%, transparent);
+  color: var(--color-ember);
+}
+
 .tag-list {
   display: flex;
   flex-wrap: wrap;
@@ -341,6 +362,8 @@ h3 {
 
   .project-heading {
     display: grid;
+    justify-items: start;
+    gap: 0.6rem;
   }
 }
 

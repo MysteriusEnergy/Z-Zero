@@ -16,7 +16,9 @@ export function ProjectIndexItem({ project }: ProjectIndexItemProps) {
               Ver proyecto
             </a>
           ) : project.status ? (
-            <span className="project-status">{project.status}</span>
+            <span className="project-status" data-status={project.status}>
+              {project.status}
+            </span>
           ) : null}
         </div>
         <p>{project.summary}</p>
