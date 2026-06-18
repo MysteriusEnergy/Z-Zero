@@ -8,7 +8,7 @@ export const navSections = [
 export const siteContent = {
   hero: {
     eyebrow: 'Full Stack Developer & IT Infrastructure Specialist',
-    title: 'Desarrollo soluciones web Full Stack listas para producción.',
+    title: 'Soluciones web listas para producción.',
     body: 'Combino frontend moderno, backend robusto e infraestructura confiable para construir aplicaciones web escalables, eficientes y bien estructuradas.',
     cta: 'Ver proyectos',
   },
